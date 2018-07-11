@@ -1,5 +1,10 @@
 <template>
   <div class="login">
+    <el-carousel :interval="2000" type="card" height="300px">
+      <el-carousel-item v-for="item1 in list" :key="item1">
+        <img :src="item1.src">
+      </el-carousel-item>
+    </el-carousel>
     <el-button>默认按钮</el-button>
     <el-button type="primary">主要按钮</el-button>
     <el-button type="text">文字按钮</el-button>
@@ -95,11 +100,7 @@
         </el-main>
       </el-container>
     </el-container>
-    <el-carousel :interval="2000" type="card" height="300px">
-      <el-carousel-item v-for="item1 in list" :key="item1">
-        <img :src="item1.src">
-      </el-carousel-item>
-    </el-carousel>
+
   </div>
 </template>
 
@@ -108,7 +109,7 @@
     data() {
       const item = {
         date: '2016-05-02',
-        name: '王小虎',
+        name: '小明同学',
         address: '上海市普陀区金沙江路 1518 弄'
       };
       return {
